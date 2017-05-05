@@ -228,10 +228,6 @@ h3,
 }
 
 .work {
-/*  clear: both;
-  width: 50%;
-  position: relative;
-  margin-left: 20px;*/
   float: left;
   position: relative;
   z-index: 1;
@@ -239,23 +235,18 @@ h3,
 }
 
 .image {
-/*  width: 75%;
-  height: 75%;*/
   float: left;
   padding-left: 40px;
 }
 
 .label {
-/*  width: 75%;
-  bottom: 5px;
-  position: absolute;
-  text-align: center;*/
   clear: both;
   position: absolute;
   bottom: 15px;
   z-index: 2;
   height: 40px;
-  width: 225px;
+  width: 100%;
+  max-width: 225px;
   background-color: #4aaaa5;
   margin-left: 40px;
   text-align: center;
@@ -306,27 +297,46 @@ input[type=submit] {
   border: 0 none;
 }
 
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    float: left;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .wrapper  {
-    width: 600px;
+    max-width: 600px;
   }
   .image {
     width: 80%;
     height: 80%;
   }
   .label, h3.portfolio {
-    width: 172px;
+    width: 100%;
+    max-width: 172px;
     font-size: 80%;
   }
-
+  #logo {
+    width: 100%;
+  }
+  nav {
+    clear: both;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .wrapper {
-    width: 375px;
+    max-width: 375px;
   }
-
- /* .label {
-    clear: both;
-  }*/
+  .image {
+    width: 50%;
+    height: 50%;
+  }
+  .label, h3.portfolio {
+    width: 100%;
+    max-width: 92px;
+    font-size: 50%;
+  }
 }
+
